@@ -1,3 +1,17 @@
+---
+
+title: QueryMind-AI
+emoji: 🤖
+colorFrom: purple
+colorTo: blue
+sdk: streamlit
+sdk_version: "1.42.0"
+python_version: "3.10"
+app_file: app.py
+pinned: false
+
+---
+
 # 🤖 AI Research Assistant
 
 একটি intelligent research assistant যা LangGraph, Groq, এবং Streamlit দিয়ে তৈরি। যেকোনো বিষয়ে web search, Wikipedia, এবং document analysis করে বাংলা বা English এ বিস্তারিত উত্তর দেয়।
