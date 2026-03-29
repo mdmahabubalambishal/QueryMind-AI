@@ -1,136 +1,378 @@
 ---
-
-title: QueryMind-AI
-emoji: 🤖
-colorFrom: purple
-colorTo: blue
+title: QueryMind AI
+emoji: 🧠
+colorFrom: blue
+colorTo: purple
 sdk: streamlit
-sdk_version: "1.42.0"
-python_version: "3.10"
+sdk_version: 1.32.0
 app_file: app.py
 pinned: false
+license: mit
+---
+
+<div align="center">
+
+# 🧠 QueryMind-AI
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=667EEA&center=true&vCenter=true&width=600&lines=Intelligent+AI+Research+Assistant;LangGraph+%7C+Groq+%7C+Streamlit;Web+Search+%7C+Wikipedia+%7C+PDF+Analysis;Bengali+%F0%9F%87%A7%F0%9F%87%A9+%7C+English+%F0%9F%87%AC%F0%9F%87%A7+Support" alt="Typing SVG" />
+
+<br>
+
+![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-ReAct_Agent-FF6B6B?style=for-the-badge)
+![Groq](https://img.shields.io/badge/Groq-LLaMA_3.3_70B-F54E42?style=for-the-badge)
+![LangChain](https://img.shields.io/badge/LangChain-Framework-1C3C3C?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.32-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/🤗_Hugging_Face-Deployed-FFD21E?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-2ecc71?style=for-the-badge)
+
+<br>
+
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Open_App-FF4B4B?style=for-the-badge)](https://huggingface.co/spaces/mahabub-unlocked/QueryMind-AI)
+[![GitHub](https://img.shields.io/badge/💻_Source_Code-GitHub-black?style=for-the-badge&logo=github)](https://github.com/mdmahabubalambishal/QueryMind-AI)
+[![LinkedIn](https://img.shields.io/badge/👤_Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/md-mahabub-alam-bishal/)
+
+<br>
+
+> **একটা intelligent AI research assistant যা যেকোনো বিষয়ে real-time web search, Wikipedia analysis, এবং document processing করে বিস্তারিত উত্তর প্রদান করে — LangGraph এর ReAct agent framework দিয়ে।**
+
+</div>
 
 ---
 
-# 🤖 AI Research Assistant
+## 🎯 Project Overview
 
-একটি intelligent research assistant যা LangGraph, Groq, এবং Streamlit দিয়ে তৈরি। যেকোনো বিষয়ে web search, Wikipedia, এবং document analysis করে বাংলা বা English এ বিস্তারিত উত্তর দেয়।
+QueryMind-AI হল একটি AI-powered research assistant যা তিনটা powerful tool ব্যবহার করে —
+
+**Web Search** — DuckDuckGo দিয়ে real-time internet search  
+**Wikipedia Analysis** — যেকোনো বিষয়ে Wikipedia থেকে বিস্তারিত তথ্য  
+**Document Processing** — PDF ও TXT file upload করে analyze করা  
+
+---
+
+## 🚀 Live Demo
+
+**👉 [App Open করো](https://huggingface.co/spaces/mahabub-unlocked/QueryMind-AI)**
+
+| Feature | Description |
+|---------|-------------|
+| 🔍 Web Search | Real-time internet search |
+| 📖 Wikipedia | বিস্তারিত research |
+| 📄 File Analysis | PDF ও TXT analyze |
+| 🌐 Multilingual | Bengali ও English support |
+| ⚡ Streaming | Real-time typing effect |
+
+---
+
+## 🏗️ Architecture
+```
+User Query (Bengali / English)
+        │
+        ▼
+┌───────────────────┐
+│   ReAct Agent     │ ── Tool selection decision
+│   (LangGraph)     │
+└────────┬──────────┘
+         │
+    ┌────┴────┐
+    ▼         ▼         ▼
+┌────────┐ ┌────────┐ ┌────────┐
+│  Web   │ │ Wiki   │ │  File  │
+│ Search │ │ Search │ │ Loader │
+│  🔍   │ │  📖   │ │  📄   │
+└───┬────┘ └───┬────┘ └───┬────┘
+    └──────────┴──────────┘
+                │
+                ▼
+┌───────────────────────┐
+│   LLaMA 3.3 70B       │ ── Response generate
+│   (via Groq)          │
+└───────────┬───────────┘
+            │
+            ▼
+┌───────────────────────┐
+│   Streamlit UI        │ ── Streaming output
+│   Chat Interface      │ ── History + Export
+└───────────────────────┘
+```
 
 ---
 
 ## ✨ Features
 
-- 🔍 **Web Search** — DuckDuckGo দিয়ে real-time web search
-- 📖 **Wikipedia Search** — যেকোনো বিষয়ে বিস্তারিত তথ্য
-- 📄 **File Upload** — PDF বা TXT file upload করে analyze
-- 🌐 **Multi-language** — Bengali ও English এ উত্তর
-- ⚡ **Streaming Response** — টাইপ হতে দেখা যায়
-- 💾 **Chat History** — conversation save ও load করা যায়
-- 📥 **PDF Export** — পুরো chat PDF এ export করা যায়
-- 📋 **Copy Button** — যেকোনো response copy করা যায়
+| Feature | Description |
+|---------|-------------|
+| 🔍 Web Search | DuckDuckGo দিয়ে real-time internet search |
+| 📖 Wikipedia Search | যেকোনো বিষয়ে Wikipedia থেকে বিস্তারিত তথ্য |
+| 📄 File Analysis | PDF ও TXT file upload করে analyze করা |
+| 🌐 Multi-language | Bengali 🇧🇩 ও English 🇬🇧 response support |
+| ⚡ Streaming Output | Real-time টাইপিং effect এ response |
+| 💾 Chat History | Conversation save ও load করার সুবিধা |
+| 📥 PDF Export | পুরো chat PDF এ export করা |
+| 📋 Copy Button | যেকোনো response এক click এ copy |
+| 🧠 ReAct Agent | Intelligent tool selection ও decision making |
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Technology | ব্যবহার |
-|------------|---------|
-| **LangGraph** | AI Agent framework |
-| **LangChain** | LLM tools ও utilities |
-| **Groq** | LLM API (LLaMA 3.3 70B) |
-| **Streamlit** | Web UI |
-| **DuckDuckGo** | Web search |
-| **Wikipedia API** | Knowledge base |
-| **Python** | Backend language |
+| Component | Technology |
+|-----------|-----------|
+| Frontend | Streamlit |
+| AI Agent | LangGraph (ReAct) |
+| LLM | LLaMA 3.3 70B via Groq |
+| Tools | DuckDuckGo + Wikipedia |
+| Framework | LangChain |
+| Language | Python 3.10+ |
+| Deployment | Hugging Face Spaces |
 
 ---
 
 ## 📁 Project Structure
 ```
-research_agent/
+QueryMind-AI/
 │
-├── .env                  # API keys
-├── requirements.txt      # Python dependencies
-├── tools.py             # LangChain tools (search, wikipedia)
-├── agent.py             # LangGraph agent setup
-├── app.py               # Streamlit UI
-├── chat_history.json    # Saved chat history (auto-generated)
-└── README.md            # Project documentation
+├── 📄 app.py               # Streamlit UI & main application
+├── 🤖 agent.py             # LangGraph ReAct agent setup
+├── 🔧 tools.py             # Custom LangChain tools
+├── 📋 requirements.txt     # Python dependencies
+├── 🔒 .env                 # API keys (local only)
+├── 🚫 .gitignore           # Git ignore rules
+└── 📖 README.md            # Project documentation
 ```
 
 ---
 
-### 1. Installation
+## 🚀 Getting Started
 
-### 2. Virtual environment তৈরি করো
+### Prerequisites
+```
+Python 3.10+
+Groq API Key → groq.com (Free)
+```
+
+### Installation
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/mdmahabubalambishas/QueryMind-AI.git
+cd QueryMind-AI
+```
+
+**2. Create virtual environment**
 ```bash
 python -m venv venv
+venv\Scripts\activate        # Windows
+source venv/bin/activate     # Mac/Linux
+```
 
-# Windows
-venv\Scripts\activate
-
-### 3. Dependencies install করো
+**3. Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. API Key সেট করো
-`.env` file তৈরি করো:
+**4. Set up environment variables**
+
+`.env` file বানাও project root এ —
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-### 5. Run করো
+**5. Run the app**
 ```bash
 streamlit run app.py
 ```
 
-Browser এ যাও: `http://localhost:8501`
+Open `http://localhost:8501` in your browser.
 
 ---
 
-## 🚀 ব্যবহার করার নিয়ম
+## 🧪 Example Queries
 
-### Web Search
+### 🔍 Web Search
 ```
-LangGraph কী এবং কীভাবে কাজ করে?
-২০২৫ সালে AI এর নতুন developments কী কী?
-```
-
-### Wikipedia Search
-```
-Artificial Intelligence এর ইতিহাস বলো
-Bangladesh এর অর্থনীতি সম্পর্কে বিস্তারিত বলো
+"LangGraph কী এবং কীভাবে কাজ করে?"
+"২০২৫ সালে AI এর নতুন developments কী?"
+"Latest news about OpenAI?"
 ```
 
-### File Upload
+### 📖 Wikipedia Research
 ```
-১. Sidebar এ PDF বা TXT file upload করো
-২. প্রশ্ন করো: "এই document এর মূল বিষয় কী?"
+"Artificial Intelligence এর ইতিহাস বিস্তারিত বলো"
+"Quantum Computing কীভাবে কাজ করে?"
+"Machine Learning vs Deep Learning পার্থক্য?"
 ```
 
-### Language Switch
+### 📄 Document Analysis
 ```
-Sidebar এ Bengali 🇧🇩 বা English 🇬🇧 select করো
+১. Sidebar এ PDF upload করো
+২. "এই document এর মূল বিষয় কী?" — জিজ্ঞেস করো
+৩. "Summarize this document in Bengali"
 ```
 
 ---
 
+## 🔍 How ReAct Agent Works
+```
+Step 1 → Thought
+         Agent query analyze করে
+         কোন tool দরকার সেটা decide করে
 
-## 📈 Future Improvements
+Step 2 → Action
+         সঠিক tool select করে
+         Web Search / Wikipedia / File Loader
 
-- [ ] Voice input (Whisper API)
-- [ ] Image generation tool
-- [ ] Database memory (long-term)
-- [ ] Multi-agent collaboration
-- [ ] Deploy to cloud (Streamlit Cloud / HuggingFace Spaces)
+Step 3 → Observation
+         Tool এর result দেখে
+         Answer sufficient কিনা check করে
+
+Step 4 → Final Answer
+         LLaMA 3.3 70B দিয়ে response generate করে
+         Bengali বা English এ stream করে দেয়
+```
 
 ---
+
+## ⚙️ Configuration
+
+**Model পরিবর্তন** (`agent.py`) —
+```python
+llm = ChatGroq(
+    model="llama-3.3-70b-versatile",  # LLM model
+    temperature=0.2,                   # Creativity (0-1)
+    max_tokens=4096                    # Response length
+)
+```
+
+**Custom Tool যোগ করা** (`tools.py`) —
+```python
+@tool
+def my_custom_tool(query: str) -> str:
+    """Tool description."""
+    # Your logic here
+    return result
+
+all_tools = [search_tool, wikipedia_search, my_custom_tool]
+```
+
+---
+
+## 📈 Performance
+
+| Metric | Value |
+|--------|-------|
+| Web Search response time | ~2-3 seconds |
+| Wikipedia response time | ~1-2 seconds |
+| PDF analysis time | ~3-5 seconds |
+| Languages supported | Bengali, English |
+| Max file size | 10MB |
+| LLM model | LLaMA 3.3 70B |
+
+---
+
+## 💡 What I Learned
+```
+✅ LangGraph ReAct Agent
+   Multi-step reasoning
+   Intelligent tool selection
+   State management
+
+✅ Tool Integration
+   DuckDuckGo web search
+   Wikipedia API
+   PDF/TXT file processing
+
+✅ Streaming Response
+   Real-time output
+   Typing effect implementation
+
+✅ Multilingual LLM
+   Bengali language support
+   Language detection
+   Response formatting
+
+✅ Chat Management
+   Conversation history
+   PDF export
+   Copy functionality
+```
+
+---
+
+## 🗺️ Roadmap
+```
+✅ Phase 1 — Core Agent (DONE)
+   Web Search + Wikipedia + File Analysis
+
+✅ Phase 2 — UI Features (DONE)
+   Streaming + History + PDF Export
+
+✅ Phase 3 — Multilingual (DONE)
+   Bengali + English support
+
+⏳ Phase 4 — Advanced Features
+   □ Voice Input (Whisper)
+   □ Long-term Memory (Database)
+   □ YouTube video analysis
+   □ Image understanding
+
+⏳ Phase 5 — Multi-Agent
+   □ Multi-agent collaboration
+   □ Specialized research agents
+   □ Citation generation
+```
+
+---
+
+## 🤝 Contributing
+```bash
+# Fork করো → Clone করো → Branch তৈরি করো
+git checkout -b feature/AmazingFeature
+
+# Changes করো → Commit করো
+git commit -m "Add AmazingFeature"
+
+# Push করো → Pull Request খোলো
+git push origin feature/AmazingFeature
+```
+
+## 📄 License
+
+This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-**Mahabub**
-- Junior AI Engineer (Learning)
-- Focus: LLM Engineering, AI Agents, RAG, Prompt Engineering
+<div align="center">
+
+**Md Mahabub Alam Bishal**
+*AI/ML Engineer | LLM & Generative AI Enthusiast*
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/md-mahabub-alam-bishal/)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github)](https://github.com/mdmahabubalambishal)
+[![HuggingFace](https://img.shields.io/badge/🤗_HuggingFace-Follow-FFD21E?style=for-the-badge)](https://huggingface.co/mahabub-unlocked)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:mdmahabubalambishal@gmail.com)
+
+</div>
+
+## 🙏 Acknowledgements
+
+- [LangChain](https://langchain.com/) — LLM framework
+- [LangGraph](https://langchain-ai.github.io/langgraph/) — Agent orchestration
+- [Groq](https://groq.com/) — Fast LLM inference
+- [DuckDuckGo](https://duckduckgo.com/) — Privacy-first web search
+- [Wikipedia](https://wikipedia.org/) — Knowledge base
+- [Streamlit](https://streamlit.io/) — UI framework
+- [Hugging Face](https://huggingface.co/) — Deployment platform
 
 ---
+
+<div align="center">
+
+⭐ **এই project টা useful লাগলে GitHub এ Star দাও!**
+
+*Made with ❤️ by Mahabub*
+
+**Live Demo:** [huggingface.co/spaces/mahabub-unlocked/QueryMind-AI](https://huggingface.co/spaces/mahabub-unlocked/QueryMind-AI)  
+**GitHub:** [github.com/mdmahabubalambishal/QueryMind-AI](https://github.com/mdmahabubalambishal/QueryMind-AI)
+
+</div>
