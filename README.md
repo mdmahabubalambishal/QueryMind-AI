@@ -296,32 +296,6 @@ all_tools = [search_tool, wikipedia_search, my_custom_tool]
    Copy functionality
 ```
 
----
-
-## 🗺️ Roadmap
-```
-✅ Phase 1 — Core Agent (DONE)
-   Web Search + Wikipedia + File Analysis
-
-✅ Phase 2 — UI Features (DONE)
-   Streaming + History + PDF Export
-
-✅ Phase 3 — Multilingual (DONE)
-   Bengali + English support
-
-⏳ Phase 4 — Advanced Features
-   □ Voice Input (Whisper)
-   □ Long-term Memory (Database)
-   □ YouTube video analysis
-   □ Image understanding
-
-⏳ Phase 5 — Multi-Agent
-   □ Multi-agent collaboration
-   □ Specialized research agents
-   □ Citation generation
-```
-
----
 
 ## 🤝 Contributing
 ```bash
