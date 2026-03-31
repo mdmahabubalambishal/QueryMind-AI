@@ -1,5 +1,5 @@
 ---
-title: Autonomous Research Agent
+title: Autonomous Research Assistant
 emoji: 🧠
 colorFrom: blue
 colorTo: purple
@@ -12,7 +12,7 @@ license: mit
 
 <div align="center">
 
-# 🧠 Autonomous Research Agent
+# 🧠 Autonomous Research Assistant
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=667EEA&center=true&vCenter=true&width=600&lines=Intelligent+AI+Research+Assistant;LangGraph+%7C+Groq+%7C+Streamlit;Web+Search+%7C+Wikipedia+%7C+PDF+Analysis;Bengali+%F0%9F%87%A7%F0%9F%87%A9+%7C+English+%F0%9F%87%AC%F0%9F%87%A7+Support" alt="Typing SVG" />
 
@@ -41,7 +41,7 @@ license: mit
 
 ## 🎯 Project Overview
 
-Autonomous Research Agent হল একটি AI-powered research assistant যা তিনটা powerful tool ব্যবহার করে —
+Autonomous Research Assistant হল একটি AI-powered research assistant যা তিনটা powerful tool ব্যবহার করে —
 
 **Web Search** — DuckDuckGo দিয়ে real-time internet search  
 **Wikipedia Analysis** — যেকোনো বিষয়ে Wikipedia থেকে বিস্তারিত তথ্য  
@@ -129,7 +129,7 @@ User Query (Bengali / English)
 
 ## 📁 Project Structure
 ```
-Autonomous Research Agent/
+Autonomous Research Assistant/
 │
 ├── 📄 app.py               # Streamlit UI & main application
 ├── 🤖 agent.py             # LangGraph ReAct agent setup
@@ -154,8 +154,8 @@ Groq API Key → groq.com (Free)
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/mdmahabubalambishas/Autonomous Research Agent.git
-cd Autonomous Research Agent
+git clone https://github.com/mdmahabubalambishas/Autonomous Research Assistant.git
+cd Autonomous Research Assistant
 ```
 
 **2. Create virtual environment**
