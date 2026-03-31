@@ -346,6 +346,6 @@ This project is licensed under the MIT License.
 *Made with ❤️ by Mahabub*
 
 **Live Demo:** [huggingface.co/spaces/mahabub-unlocked/QueryMind-AI](https://huggingface.co/spaces/mahabub-unlocked/QueryMind-AI)  
-**GitHub:** [github.com/mdmahabubalambishal/QueryMind-AI](https://github.com/mdmahabubalambishal/Autonomous Research Agent)
+**GitHub:** [github.com/mdmahabubalambishal/QueryMind-AI](https://github.com/mdmahabubalambishal/Autonomous Research Assistant)
 
 </div>
