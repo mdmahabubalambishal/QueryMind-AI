@@ -16,13 +16,6 @@ st.set_page_config(
 # ── Custom CSS ───────────────────────────────────────
 st.markdown("""
 <style>
-    h1 {
-        background: linear-gradient(90deg, #667eea, #764ba2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 2.5rem !important;
-        font-weight: 800 !important;
-    }
     .stButton > button {
         background: linear-gradient(90deg, #667eea, #764ba2) !important;
         color: white !important;
@@ -34,25 +27,27 @@ st.markdown("""
         border-radius: 15px !important;
         border: 2px solid #667eea !important;
     }
+    .main-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #667eea;
+        padding: 10px 0 0 0;
+        margin: 0;
+    }
+    .main-subtitle {
+        text-align: center;
+        color: #888;
+        font-size: 0.95rem;
+        margin-top: 4px;
+        margin-bottom: 10px;
+    }
 </style>
 """, unsafe_allow_html=True)
 
 # ── Main Header ──────────────────────────────────────
-st.markdown("""
-    <div style='text-align: center; padding: 20px 0;'>
-        <span style='
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #667eea;
-            text-shadow: 2px 2px 4px rgba(102,126,234,0.3);
-            letter-spacing: -1px;
-        '>🤖 AI Research Assistant</span>
-        <br/>
-        <span style='color: #888; font-size: 0.95rem; margin-top: 8px; display: block;'>
-            Powered by LangGraph • Groq • LLaMA 3.3 70B
-        </span>
-    </div>
-""", unsafe_allow_html=True)
+st.markdown('<p class="main-title">🤖 AI Research Assistant</p>', unsafe_allow_html=True)
+st.markdown('<p class="main-subtitle">Powered by LangGraph • Groq • LLaMA 3.3 70B</p>', unsafe_allow_html=True)
 
 # ── Session State ───────────────────────────────────
 if "messages" not in st.session_state:
